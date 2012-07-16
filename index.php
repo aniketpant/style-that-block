@@ -34,7 +34,7 @@ function style_that_block($content) {
 
     if($match)
     {  
-        $theContent = preg_replace('/`(.+)\`/', '<span class="code">$1</span>', $content);
+        $theContent = preg_replace('/`(.+)\`/', '<span class="the-bloc">$1</span>', $content);
     }  
 
     else  
@@ -80,7 +80,7 @@ function stb_css() {
         if ($theme == 'light') {
             echo "
             <style type='text/css'>
-                span.code {
+                span.the-bloc {
                     background: rgba(0, 0, 0, 0.05);
                     color: #666;
                     padding: 2px $padding;
@@ -91,7 +91,7 @@ function stb_css() {
         else if ($theme == 'dark') {
             echo "
             <style type='text/css'>
-                span.code {
+                span.the-bloc {
                     background: rgba(0, 0, 0, 0.75);
                     color: #fff;
                     padding: 2px $padding;
@@ -102,7 +102,7 @@ function stb_css() {
         else if ($theme == 'awesome') {
             echo "
             <style type='text/css'>
-                span.code {
+                span.the-bloc {
                     background: rgba(0, 0, 0, 0.05);
                     color: #ff487f;
                     box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.25);

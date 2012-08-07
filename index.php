@@ -30,19 +30,7 @@ function stb_remove() {
 }
 
 function style_that_block($content) {
-    $match = preg_match_all('/`.+\`/', $content, $matches);
-
-    if($match)
-    {  
-        $theContent = preg_replace('/`(.+)\`/', '<span class="the-bloc">$1</span>', $content);
-    }  
-
-    else  
-    {  
-        $theContent = $content;  
-    }   
-    
-    return $theContent; 
+    return preg_replace('/`(.+?)`/', '<span class="the-bloc">$1</span>', $content);
 }
 
 add_filter('the_content', 'style_that_block');
